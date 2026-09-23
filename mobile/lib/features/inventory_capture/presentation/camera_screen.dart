@@ -34,21 +34,21 @@ class _CameraScreenState extends State<CameraScreen> {
     setState(() {
       _isProcessing = false;
       _currentDetections.clear();
-      _currentDetections.addAll([
+      _currentDetections.addAll(const [
         VisualDetection(
-          rect: const Rect.fromLTWH(40, 150, 110, 180),
+          rect: Rect.fromLTWH(40, 150, 110, 180),
           label: "Ester-C 500mg",
           confidence: 0.98,
           status: "MATCHED",
         ),
         VisualDetection(
-          rect: const Rect.fromLTWH(170, 145, 115, 185),
+          rect: Rect.fromLTWH(170, 145, 115, 185),
           label: "Vit D3 400 IU",
           confidence: 0.96,
           status: "MATCHED",
         ),
         VisualDetection(
-          rect: const Rect.fromLTWH(300, 150, 110, 180),
+          rect: Rect.fromLTWH(300, 150, 110, 180),
           label: "¿B-Complex?",
           confidence: 0.68,
           status: "AMBIGUOUS",
@@ -112,7 +112,7 @@ class _CameraScreenState extends State<CameraScreen> {
                     child: Icon(
                       Icons.camera_alt_outlined,
                       size: 80,
-                      color: Colors.white.withOpacity(0.15),
+                      color: Colors.white.withValues(alpha: 0.15),
                     ),
                   ),
 
@@ -132,7 +132,7 @@ class _CameraScreenState extends State<CameraScreen> {
                     bottom: 220,
                     child: Container(
                       decoration: BoxDecoration(
-                        border: Border.all(color: InnovateColors.cameraReticle.withOpacity(0.4), width: 1.5),
+                        border: Border.all(color: InnovateColors.cameraReticle.withValues(alpha: 0.4), width: 1.5),
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Column(
@@ -168,7 +168,7 @@ class _CameraScreenState extends State<CameraScreen> {
               child: Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: InnovateColors.aiUnknown.withOpacity(0.95),
+                  color: InnovateColors.aiUnknown.withValues(alpha: 0.95),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Row(
@@ -194,7 +194,7 @@ class _CameraScreenState extends State<CameraScreen> {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               decoration: BoxDecoration(
-                color: InnovateColors.darkNavy.withOpacity(0.90),
+                color: InnovateColors.darkNavy.withValues(alpha: 0.90),
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(color: Colors.white10),
               ),

@@ -85,7 +85,7 @@ class _ExceptionReviewScreenState extends State<ExceptionReviewScreen> {
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                               decoration: BoxDecoration(
-                                color: InnovateColors.aiReview.withOpacity(0.15),
+                                color: InnovateColors.aiReview.withValues(alpha: 0.15),
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Row(
@@ -119,7 +119,7 @@ class _ExceptionReviewScreenState extends State<ExceptionReviewScreen> {
                               width: 80,
                               height: 100,
                               decoration: BoxDecoration(
-                                color: const Color(0xFF1E2564).withOpacity(0.1),
+                                color: const Color(0xFF1E2564).withValues(alpha: 0.1),
                                 borderRadius: BorderRadius.circular(10),
                                 border: Border.all(color: InnovateColors.solgarGold),
                               ),

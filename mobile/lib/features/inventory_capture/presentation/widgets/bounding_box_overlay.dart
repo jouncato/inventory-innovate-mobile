@@ -82,7 +82,7 @@ class _BoundingBoxPainter extends CustomPainter {
         textDirection: TextDirection.ltr,
       )..layout();
 
-      final labelBackground = Paint()..color = color.withOpacity(0.9);
+      final labelBackground = Paint()..color = color.withValues(alpha: 0.9);
       final labelRect = Rect.fromLTWH(
         scaledRect.left,
         scaledRect.top - 20 >= 0 ? scaledRect.top - 20 : scaledRect.top,

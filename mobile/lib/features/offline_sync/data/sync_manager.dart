@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'dart:typed_data';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:uuid/uuid.dart';
 
@@ -93,7 +93,7 @@ class SyncManager {
         }
       } catch (e) {
         // En caso de fallo de red en bodega, la tarea permanece en cola para reintento automático
-        print("[SyncManager] Error de sincronización (modo offline activo): $e");
+        debugPrint("[SyncManager] Error de sincronización (modo offline activo): $e");
       }
     }
 
